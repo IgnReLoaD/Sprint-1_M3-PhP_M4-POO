@@ -24,39 +24,45 @@ Ara imprimeix per pantalla l'array resultant valor a valor.
     echo 'La longitut del array mesclat és: ' . count($arrTots) . '<br><br>';
     echo 'Contingut array mesclat amb print_r: ' . print_r(array_values($arrTots)) . '<br><br>';
 
-    // NO recomanat per:  
+    // Bucle FOR ... NO recomanat per:  
     //  - ens limita a valors numèrics
     //  - els Keys poden estar desordenats
     //  - si falta algun Key esborrat dona error Undefined offset
-    echo 'Contingut array mesclat amb bucle FOR: ' . '<br>';
+    echo 'Contingut array mesclat amb bucle FOR: <br>';
     for ($i = 0; $i < $arrLong; ++$i){
         print $arrTots[$i];
     }
-
-    // SI recomanat:
     echo '<br>';
-    echo 'Contingut array mesclat amb bucle ForEach: ' . '<br>';
+
+    // ForEach ... SI recomanat:    
+    echo 'Contingut array mesclat amb bucle ForEach: <br>';
     foreach ($arrTots as $valor) {
       print $valor;
     }
+    echo '<br>';
 
-    // opcional, while-list-each:
-    while(list($var, $val) = each($arrTots)) {
-        print "$var is $val <br>";
+    // opcional, while-list-each ... mostra posició->valor en cada iteració:
+    echo 'Contingut array amb While-list-each: <br>';
+    while(list($pos, $val) = each($arrTots)) {
+        print "$pos is $val <br>";
     }
+    echo '<br>';
 
     // var_dump:
+    echo 'Contingut array amb var_dump: <br>';
     var_dump(each($arrTots));
+    echo '<br>';
 
     // a partir de PhP 5.5 podem utilitzar List amb ForEach:
     // Esto:
+    echo 'Contingut array amb ForEach + List: <br>';
     foreach ($users as $user){
         list($nombre, $apellido) = $user;
         echo "Usuario: $nombre $apellido <br>";
     }
     // Devuelve lo mismo que esto:
-        foreach ($users as list($nombre, $apellido))
-    {
+    echo 'Contingut array amb ForEach + List (nested): <br>';
+    foreach ($users as list($nombre, $apellido)) {
         echo "Usuario: $nombre $apellido <br>";
     }
 
