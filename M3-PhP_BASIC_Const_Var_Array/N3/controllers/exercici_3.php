@@ -31,6 +31,7 @@
 
         // sortida de dades
         echo 'Array resultant: <span>' . print_r($arrResult) . '</span> <br><br>';
+    }
 
 ?>
 
