@@ -2,18 +2,16 @@
     ENUNCIAT:
 
     Escriu un programa PHP per intercanviar el primer i últim caràcter 
-    d'una cadena donada, i imprimeix la nova cadena.
-    Exemple:
+    d'una cadena donada, i imprimeix la nova cadena. Exemple:
 
-    Entrada
-    wxyz
-    a
-    ab
-
-    Sortida
-    zxyw
-    a
-    ba
+    Entrada:
+      wxyz
+      a
+      ab
+    Sortida:
+      zxyw
+      a
+      ba
   -->
 
       <!-- instruccions PhP  -->
@@ -23,8 +21,8 @@
         if (strlen($paraula) <= 1) {
             $resul = $paraula;
         }else{
-            $inici = substr($paraula,0,1);
-            $final = substr($paraula,-1,1);
+            $inici = substr($paraula, 0, 1);
+            $final = substr($paraula,-1, 1);
             $resul = substr_replace($paraula,$inici,-1, 1);
             $resul = substr_replace($resul,$final, 0, 1);
         }
@@ -33,6 +31,7 @@
 
     // entrada de dades 
     echo '<b>EXERCICI-2</b> <br><br>';
+
     if ( !empty($_POST['inpCadena']) ) {
         $strCadena = $_POST['inpCadena'];
         
@@ -51,6 +50,6 @@
     <br>
     <br>
     <input type="submit" value="intercanvi">
-    <br>    
+    <br> 
+    <br>   
 </form>
-
