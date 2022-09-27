@@ -51,14 +51,14 @@ Ara imprimeix per pantalla l'array resultant valor a valor.
     // var_dump:
     echo 'Contingut array amb var_dump: <br>';
     var_dump(each($arrTots));
-    echo '<br>';
+    echo '<br><br>';
 
     // a partir de PhP 5.5 podem utilitzar List amb ForEach:
     // Esto:
     echo 'Contingut array amb ForEach + List: <br>';
     foreach ($arrTots as $element){
         list($clau, $valor) = $element;
-        echo "Posició: $clau $valor <br>";
+        echo "Posició: $clau $valor <br>"; 
     }
     // Devuelve lo mismo que esto:
     echo 'Contingut array amb ForEach + List (nested): <br>';
