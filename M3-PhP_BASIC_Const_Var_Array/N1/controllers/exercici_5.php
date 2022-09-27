@@ -56,21 +56,23 @@ Ara imprimeix per pantalla l'array resultant valor a valor.
     // a partir de PhP 5.5 podem utilitzar List amb ForEach:
     // Esto:
     echo 'Contingut array amb ForEach + List: <br>';
-    foreach ($users as $user){
-        list($nombre, $apellido) = $user;
-        echo "Usuario: $nombre $apellido <br>";
+    foreach ($arrTots as $element){
+        list($clau, $valor) = $element;
+        echo "Posició: $clau $valor <br>";
     }
     // Devuelve lo mismo que esto:
     echo 'Contingut array amb ForEach + List (nested): <br>';
-    foreach ($users as list($nombre, $apellido)) {
-        echo "Usuario: $nombre $apellido <br>";
+    foreach ($arrTots as list($clau, $valor)) {
+        echo "Posició: $clau $valor <br>";
     }
 
     // array_walk (com el MAP de JavaScript):
-    function mostrarMascotas($nombre, $animal){
-        echo strtoupper($animal) . " -> $nombre" . "<br>";
+    echo 'Contingut array amb Array_Walk (map de JS): <br>';
+    function mostrarValors($posicio, $valor){
+        echo strtoupper($valor) . " -> $posicio" . "<br>";
     }
-    // Muestra el listado del array:
-    array_walk($animales, 'mostrarMascotas');
+    // Iteració per mostrar llistat array amb Callback Function 'mostrarValors':
+    array_walk($arrTots, 'mostrarValors');
+    echo '<br>';
 
 ?>
