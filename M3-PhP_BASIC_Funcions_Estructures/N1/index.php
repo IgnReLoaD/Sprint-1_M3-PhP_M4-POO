@@ -38,16 +38,20 @@
                             <?php include 'controllers/exercici_3.php';?>
                         </post>
                         <post class="art-corto"> 
-                        <?php include 'controllers/exercici_4.php';?>
+                            <?php include 'controllers/exercici_4.php';?>
                         </post>
                     </section>
                     <section class="flex-2-cols">
-                        <post class="art-corto"> </post>
-                        <post class="art-corto"> </post>
+                        <post class="art-corto"> 
+                            <?php include 'controllers/exercici_5.php';?>
+                        </post>
+                        <post class="art-corto"> 
+                            <?php include 'controllers/exercici_6.php';?>
+                        </post>
                     </section>
                     <section class="flex-1-col">
                         <post class="art-largo"> 
-                            <!-- <?php include 'controllers/exercici_3.php';?> -->
+                            <!-- <?php include 'controllers/exercici_6.php';?> -->
                         </post>
                     </section>                    
                 </article>
