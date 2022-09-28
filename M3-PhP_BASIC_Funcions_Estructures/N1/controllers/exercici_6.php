@@ -1,50 +1,38 @@
 <!-- 
     ENUNCIAT:
 
-    Escriure una funció per verificar el grau d'un/a estudiant d'acord amb la nota.
-
-    Condicions:
-
-    Si la nota és 60% o més, el grau hauria de ser Primera Divisió.
-    Si la nota està entre 45% i 59%, el grau hauria de ser Segona Divisió.
-    Si la nota està entre 33% to 44%, el grau hauria de ser Tercera Divisió.
-    Si la nota és menor a 33%, l'estudiant reprovarà.
+    Charlie em va mossegar el dit!
+    Charlie et mossegarà el dit exactament el 50% del temps.
+    Escriu La funció isBitten () que retorna TRUE amb un 50% de probabilitat i FALSE en cas contrari.
+    Consell: pot ser que la funció rand () et resulti útil.
   -->
 
     <!-- instruccions PhP  -->
 <?php
 
-    // valor per defecte =10 però agafarà el valor que li passem, si li passem.
-    function comptar3($intMaxim = 10){                 
-        $strMsg = '';             
-        for($i=0; $i<=$intMaxim; $i+=2){            
-            if ($i<=$intMaxim) $strMsg .= strval($i) . ', ';                        
-        }
-        return $strMsg .= '<span> YA!! </span>';
-    }
+    function isBitten(){                 
+        $intAleatori = rand(0,100);
+        echo 'Probabilitat del ' . $intAleatori . '% <br>';
+        return ($intAleatori >= 50) ? true : false;
+    }    
     
-    // entrada de dades 
-    echo '<b>EXERCICI-4</b> <br><br>';
-    if ( !empty($_POST['inpValorMax']) ) {
-        $strValor = $_POST['inpValorMax'];         
+    // entrada de dades (no n'hi ha)
+    echo '<b>EXERCICI-6</b> <br><br>';
 
-        // llogica de dades
-        $strResul = comptar3(intval($strValor));                
-    }else{
-        // llogica de dades
-        $strResul = comptar3();
-    }
+    // llogica de dades
+    $strResul = isBitten();
+    
     // sortida de dades
-    echo $strResul . "<br><br>";
+    echo ($strResul) ? "En Charlie <span>si</span> m'ha mossegat!<br><br>" : "En Charlie <span>no</span> m'ha mossegat.<br><br>";
 ?>
 
     <!-- renderitzat Html  -->
 <form action="index.php" method="post">
-    <label for="inpValorMax">Comptem fins a (10 per defecte):</label>
-    <input type="number" id="inpValorMax" name="inpValorMax" min="10" max="99">
+    <!-- <label for="inpProbable">Probabilitats (0-100%):</label>
+    <input type="number" id="inpProbable" name="inpProbable" min="0" max="100"> -->
     <br>
     <br>
-    <input type="submit" value="comptar">
+    <input type="submit" value=" mossegada? ">
     <br> 
     <br>   
   
