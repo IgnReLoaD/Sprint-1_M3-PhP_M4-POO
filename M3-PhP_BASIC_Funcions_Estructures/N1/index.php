@@ -30,7 +30,7 @@
                             <?php include 'controllers/exercici_1.php';?>
                         </post>
                         <post class="art-corto"> 
-                            <!-- <?php include 'controllers/exercici_2.php';?> -->
+                            <?php include 'controllers/exercici_2.php';?>
                         </post>                        
                     </section>
                     <section class="flex-2-cols">
