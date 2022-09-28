@@ -19,16 +19,16 @@
         $strMsg = '';      
         switch (true) {
             case ($intNota < 33):
-                $strMsg = "L'estudiant reprovarà :'( <br>";
+                $strMsg = "L'estudiant <span>reprovarà</span>  :'( <br>";
                 break;
             case ($intNota < 45):
-                $strMsg = "Grau de <span>Tercera</span> Divisió :( <br>";
+                $strMsg = "Grau de <span>Tercera</span> Divisió  :( <br>";
                 break;
             case ($intNota < 60):
-                $strMsg = "Grau de <span>Segona</span> Divisió :) <br>";
+                $strMsg = "Grau de <span>Segona</span> Divisió  :) <br>";
                 break;               
             default:
-                $strMsg = "Grau de <span>Primera</span> Divisió!! :D <br>";
+                $strMsg = "Grau de <span>Primera</span> Divisió!!  :D <br>";
         }
         return $strMsg;
     }
