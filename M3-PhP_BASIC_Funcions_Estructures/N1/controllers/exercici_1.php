@@ -8,14 +8,15 @@
     <!-- instruccions PhP  -->
 <?php
 
-    function esParell($numero){        
-        ($numero % 2) ? false : true;        
+    function esParell($numero){    
+        // echo "Debug: dins la function esParell, número val: " . $numero;    
+        return ($numero % 2 == 0) ? true : false;        
     }
     
     // entrada de dades 
     echo '<b>EXERCICI-1</b> <br><br>';
     if ( !empty($_POST['inpValor']) ) {
-        $intValor = $_POST['inpValor'];
+        $intValor = $_POST['inpValor'];        
 
         // llogica de dades
         if (esParell($intValor)){
@@ -25,7 +26,7 @@
         }
 
         // sortida de dades
-        echo "L'edat entrada és <span>" . $result . "</span>.<br><br>";
+        echo "L'edat entrada (" . $intValor . ") és <span>" . $result . "</span>.<br><br>";
     }
 ?>
 
