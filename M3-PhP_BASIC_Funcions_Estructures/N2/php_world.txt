@@ -1,0 +1,13 @@
+
+0. Discord clase
+   --> 1. chrome ITAcademy-exercise 
+          --> 2. VSCode 
+                 --> 3. explorer working-folder 
+                        --> 4. explorer httdocs-folder 
+                               --> 5. chrome webs-study "learn-by-doing" w3schools, etc...
+			              --> 6. xampp/Apache 
+                                             --> 7. opera localhost/httdocs... testing
+                                                    --> 8. gitBash 
+                                                           --> 9. gitHub-Repo 
+                                                                  --> 10. chrome tramesa
+
