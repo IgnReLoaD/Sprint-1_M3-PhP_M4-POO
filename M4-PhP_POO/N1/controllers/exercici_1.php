@@ -17,6 +17,7 @@
     // Per tan si localment (sense API) invoquem el mètode "EmployeeController::showEmployee":
     // showEmployee('Ignasi',28000);
 
+    echo '<b> EXERCICI-1 Employee (obj 1 class)</b> <br><br>';
     // ara deixarem que l'usuari entri el seu nom i el seu Salari...
     if ( !empty($_POST['inpNom'])  &&  !empty($_POST['inpSou']) ) {
 
@@ -33,8 +34,7 @@
 
 ?>
 
-    <!-- renderitzat Html  -->
-    <b> EXERCICI-1 Eratóstenes</b> <br><br>
+    <!-- renderitzat Html  -->    
     <form action="index.php" method="post">
         <label for="inpNom">Entra el teu Nom: </label>
         <input type="text" id="inpNom" name="inpNom" placeholder="nom de pila">    
