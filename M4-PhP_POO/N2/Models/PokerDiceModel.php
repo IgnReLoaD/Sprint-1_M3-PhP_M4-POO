@@ -1,8 +1,10 @@
 <?php
 
-class PockerDice{
+echo 'hola';
+
+// class PockerDice{
 
     
-}
+// }
 
 ?>

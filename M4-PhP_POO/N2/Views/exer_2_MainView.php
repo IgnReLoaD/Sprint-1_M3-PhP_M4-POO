@@ -10,7 +10,7 @@
 
 <?php
     // l'arxiu controller té els mètodes-funcions específiques per PokerDice
-    require 'PokerDiceController.php';
+    require './Controllers/PokerDiceController.php';
 
     echo '<b> POO Nivell-2 EXER-1 PockerDice (Herència subclasses)</b> <br><br>';
 
