@@ -8,7 +8,7 @@
         // zona atributs
         private int $_amp;
         private int $_alt;
-        private int $_area;
+        private float $_area;
 
         // 1a-zona: mètode Constructor "initialize"
         public function initialize($amp,$alt){
