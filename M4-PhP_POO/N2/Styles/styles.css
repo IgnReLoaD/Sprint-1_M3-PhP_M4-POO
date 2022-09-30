@@ -13,8 +13,16 @@
 
 /* ----- ZONA GENERAL -----*/
 
+* {
+    color: whitesmoke;
+}
+
+input {
+    background-color: darkslategrey;
+}
 span {
     font-weight: bold;
+    font-size: 200px;
     color: orangered;    
 }
 
@@ -106,7 +114,7 @@ main {
     border-color: black;
     border-width: 15px;
     margin-bottom: 20px;
-    height: 300px;   
+    height: 450px;   
     background-color: black;
     padding-bottom: 50px;
 }
@@ -117,7 +125,7 @@ article {
     background-color: #40465a;
     border-width: 15px;  
     width: 63%;   
-    height: 270px;   
+    height: 420px;   
     padding-bottom: 35px;
 }
 
@@ -157,7 +165,7 @@ main > article > section {
 
 .art-largo {
     width: 100%;
-    background-color:#79b0e4;
+    background-color:#105c41;
     margin-bottom: 5px;
 }
 

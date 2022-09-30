@@ -12,8 +12,34 @@
     // l'arxiu controller té els mètodes-funcions específiques per PokerDice
     require './Controllers/PokerDiceController.php';
 
-    echo '<b> POO Nivell-2 EXER-1 PockerDice (Herència subclasses)</b> <br><br>';
+    echo ' &nbsp; <b> POO Nivell-2 EXER-1 PockerDice (Herència subclasses)</b> <br><br>';    
 
+    // $shot = 1;
+
+    if ( !empty($_POST['inpShot']) && ($_POST['inpShot'] < "5") ) {
+
+        // entrada de dades
+        $intShot = $_POST['inpShot'];
+
+        // llogica de dades
+        $strShot = shot();
+        unset($_POST);
+
+        // sortida de dades
+        echo '&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span> ' . $strShot . ' </span>';
+    }
 
 ?>
 
+    <!-- renderitzat Html  -->    
+    <form action="index.php" method="post">
+        <br>
+        &nbsp; &nbsp; <label for="inpShot">Torn de jugada... &nbsp; </label>
+        <!-- <input type="number" id="inpShot" name="inpShot" value="<?php $shot ?>" readonly> -->
+        <input type="number" id="inpShot" name="inpShot" value="1" readonly>
+        <br>        
+        <br>
+        &nbsp; &nbsp; &nbsp; <input type="submit" value=" Tirar! ">
+        <br> 
+        <br>     
+    </form>
