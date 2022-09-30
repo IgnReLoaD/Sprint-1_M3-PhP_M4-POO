@@ -11,42 +11,21 @@
     echo '<b> EXERCICI-2 </b> <br><br>';
 
     // funcions amb valors Float (decimals)
-    function trucada($intTemps, $floTarifaBase, $floTarifaPaso) {
-        $floEuros = $floTarifaBase;
-        // switch ($intTemps)
-        //  case (3): ($floEuros+=($intTemps-3)+$floTarifaPaso) : '';
-        // ($intTemps >3) ? ($floEuros+=($intTemps-3)*$floTarifaPaso) : $floEuros=99;
-
-        switch (true) {
-            // case ($intTemps=3): 
-            //     $floEuros  = $floTarifaBase + $floTarifaPaso; 
-            //     break; 
-            case ($intTemps>=3): 
-                $floEuros  += $floTarifaPaso + ((($intTemps-3) * $floTarifaPaso)); 
-                break;    
-            default :
-                $floEuros = $floTarifaBase;   
-                break;                
-        }
-
-        // if ($intTemps >=3) 
-        // ($intTemps >=3) ? ($floEuros+=($intTemps-3)*$floTarifaPaso) : ($floEuros = $floTarifaBase);
-        return $floEuros;
+    function trucada($intTemps, $floTarifaBase, $floTarifaPaso) {        
+        return  ($floTarifaBase + $floTarifaPaso + ((($intTemps-3) * $floTarifaPaso)));
     }
 
     if ( !empty($_POST['inpTemps']) ) {
 
         // entrada de dades
         $intTemps = intval($_POST['inpTemps']);    
-        $floTarifaBase = 0.10;
-        $floTarifaPaso = 0.05;
         $floTotalCoste = 0;
+        define("floTARIFA_BASE",0.10);
+        define("floTARIFA_PASO",0.05);
 
         // llogica de dades
-        switch (true) {
-            case ($intTemps<3): $floTotalCoste=$floTarifaBase; break;
-            default: $floTotalCoste = trucada($intTemps,$floTarifaBase,$floTarifaPaso);break;
-        }
+        // ($intTemps<3) ? ($floTotalCoste=0.10) : ($floTotalCoste = 0.10 + 0.05 + ((($intTemps-3) * 0.05)));
+        ($intTemps<3) ? ($floTotalCoste=floTARIFA_BASE) : ($floTotalCoste = trucada($intTemps,floTARIFA_BASE,floTARIFA_PASO));        
         unset($_POST);
         
         // sortida de dades        
@@ -58,7 +37,7 @@
     <!-- renderitzat Html  -->
 <form action="index.php" method="post">
     <label for="inpTemps">COST TRUCADA:<br><br>Quant costa la teva trucada?<br> &nbsp; ... entra els minuts (1-15):</label>
-    <input type="number" id="inpTemps" name="inpTemps" value="0" min="0" max="15">
+    <input type="number" id="inpTemps" name="inpTemps" value="0" min="1" max="15">
     <br>
     <br>
     <input type="submit" value=" mostrar cost ">
