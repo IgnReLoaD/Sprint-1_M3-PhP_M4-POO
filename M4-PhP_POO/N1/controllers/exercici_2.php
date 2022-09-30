@@ -23,9 +23,9 @@
         $strFig1 = "Rectangle";
         $strFig2 = "Triangle";
 
-        // llogica de dades
-        $strMsg1 = "L'àrea del teu Rectangle (b*h)  = " . strval(drawShape($strFig1,$intBase,$intHigh)) . "m<sup>2</sup>. <br>";
-        $strMsg2 = "L'àrea del teu Triangle (b*h/2) = " . strval(drawShape($strFig2,$intBase,$intHigh)) . "m<sup>2</sup>. <br>";        
+        // llogica de dades - number_format(($floTotCost/1.1),2)
+        $strMsg1 = "L'àrea del teu Rectangle (b*h)  = <b>" . strval(number_format(drawShape($strFig1,$intBase,$intHigh),2)) . "m<sup>2</sup> </b>. <br>";
+        $strMsg2 = "L'àrea del teu Triangle (b*h/2) = <b>" . strval(number_format(drawShape($strFig2,$intBase,$intHigh),2)) . "m<sup>2</sup> </b>. <br>";        
 
         // sortida de dades
         echo $strMsg1 . $strMsg2 . '---------------------------------------------------<br>';
