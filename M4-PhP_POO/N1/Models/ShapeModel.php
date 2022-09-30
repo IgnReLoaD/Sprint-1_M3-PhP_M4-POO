@@ -24,6 +24,12 @@
         public function setGrabarArea($area){
             $this->_area = $area;
         } 
+        public function getLlegirAmp(){
+            return $this->_amp;
+        }  
+        public function getLlegirAlt(){
+            return $this->_alt;
+        }  
 
         // 3a-zona: mètodes ToString "print"
         //          ... en Classe Mare no tenim, tindrem a sub-classe
@@ -51,8 +57,10 @@
         //    ... Atenció!! hereta de Shape però només estava declarat, 
         //        per tan aquí cal definir-lo:
         public function calcularArea() {
-            setGrabarArea($this->_amp * $this->_alt);
-            return getLlegirArea();            
+            // setGrabarArea($this->_amp * $this->_alt);
+            // $this->_area = $this->_amp * $this->_alt;
+            $this->setGrabarArea($this->getLlegirAmp() * $this->getLlegirAlt());
+            return $this->getLlegirArea();            
         }
     }
 
@@ -62,8 +70,8 @@
         //        només però important: ens CAL DEFINIR el mètode específic:
 
         public function calcularArea() {
-            setGrabarArea($this->_amp * $this->_alt / 2);
-            return getLlegirArea();            
+            $this->setGrabarArea($this->getLlegirAmp() * $this->getLlegirAlt() / 2);
+            return $this->getLlegirArea();            
         }
     }
 
