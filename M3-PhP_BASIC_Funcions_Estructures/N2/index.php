@@ -35,7 +35,7 @@
                     </section>
                     <section class="flex-2-cols">
                         <post class="art-corto"> 
-                            <!-- <?php include 'controllers/exercici_3.php';?>  -->
+                            <?php include 'controllers/exercici_3.php';?> 
                         </post>
                         <post class="art-corto"> </post>
                     </section>
