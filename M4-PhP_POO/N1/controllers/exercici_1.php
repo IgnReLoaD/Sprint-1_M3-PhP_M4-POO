@@ -15,6 +15,35 @@
     // ha de identificar el mètode: $routes->get("list","EmployeeController::listEmployee");
 
     // Per tan si localment (sense API) invoquem el mètode "EmployeeController::showEmployee":
-    showEmployee('Ignasi',28000);
+    // showEmployee('Ignasi',28000);
+
+    // ara deixarem que l'usuari entri el seu nom i el seu Salari...
+    if ( !empty($_POST['inpNom'])  &&  !empty($_POST['inpSou']) ) {
+
+        // entrada de dades
+        $strNom = $_POST['inpNom'];    
+        $intSou = intval($_POST['inpSou']);
+
+        // llogica de dades
+        showEmployee($strNom,$intSou);
+
+        // sortida de dades
+        // ...mètode Show procesa i ja mostra a pantalla
+    }
 
 ?>
+
+    <!-- renderitzat Html  -->
+    <b> EXERCICI-1 Eratóstenes</b> <br><br>
+    <form action="index.php" method="post">
+        <label for="inpNom">Entra el teu Nom: </label>
+        <input type="text" id="inpNom" name="inpNom" placeholder="nom de pila">    
+        <br>
+        <label for="inpSou">Entra el teu Sou: </label>
+        <input type="number" id="inpSou" name="inpSou">
+        <br>
+        <br>
+        <input type="submit" value=" Toca pagar impostos? ">
+        <br> 
+        <br>     
+    </form>

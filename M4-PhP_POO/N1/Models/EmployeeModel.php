@@ -26,19 +26,14 @@
             $msg .= ' __________________ <br>'; 
             $msg .= ' ' .  $this->getLlegirNom() .  '<br>';
             echo $msg;
-            // if ($this->sou > 6000){
-            //     echo 'Must pay taxes 💰';
-            // }else{
-            //     echo 'exempt from paying taxes 😎';
-            // }
         }
 
         // 4a-zona: mètodes Específics
         public function pagar(){
             if ($this->_sou > 6000){
-                echo 'Must pay taxes 💰';
+                echo 'Must pay taxes 💰 <br><br>';
             }else{
-                echo 'exempt from paying taxes 😎';
+                echo 'exempt from paying taxes 😎 <br><br>';
             }
         }
 
