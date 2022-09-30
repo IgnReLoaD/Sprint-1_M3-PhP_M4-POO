@@ -1,0 +1,194 @@
+/* ====== ESTILS PER MIDA DESKTOP =========================*/
+
+/* ----- ZONA DEBUGGER -----*/
+
+/* 
+    * {
+        /* activem borders de les peces mentre elaborem o depurem la pag  */
+        /* border-style: solid;   
+        border-width: 1px;     
+        border-color: hotpink; 
+    } 
+*/
+
+/* ----- ZONA GENERAL -----*/
+
+span {
+    font-weight: bold;
+    color: orangered;    
+}
+
+#content {
+    height: 430px;
+    max-width: 1200px;
+}
+
+.flex-vertical {
+    display: flex;              
+    flex-direction: column;          
+    justify-content: space-between;     
+}
+
+.flex-horizontal {
+    display: flex;              
+    flex-direction: row;          
+    justify-content: space-between;
+}
+
+
+/* ----- ZONA HEADER -----*/
+
+header {
+    border-style: solid;
+    border-color: black;
+    border-width: 15px;
+    background-color: black;
+    margin-bottom: 20px;
+    display: flex;
+    height: 85px;
+}
+
+.lateral {
+    width: 15%;
+    border-color: #40465a;
+}
+
+.central {
+    width: 65%;
+    border-color: #40465a
+}
+
+#header-sup {
+    background-color: #40465a;
+    border-color: #40465a;
+    border-width: 10px;
+    border-style: solid;
+    margin: 0px;
+}
+
+#header-inf {
+    border-color: #e47e3b;
+    border-width: 10px;
+    border-style: solid;
+    background-color: #eed461;
+    margin: 0px;
+}
+
+#header-left {
+    background-color: #fd5353;
+    border-color: #40465a;
+    border-width: 10px;
+}
+
+#header-center {
+    background-color: #fd5353;
+    border-color: #40465a;
+    border-width: 10px;
+}
+
+#header-right {
+    background-color: #fd5353;
+    border-color: #40465a;
+    border-width: 10px;
+}
+
+#header-center-inf {
+    background-color: #eed461;
+    border-color: #e47e3b;
+    border-width: 10px;
+    text-align: center;
+}
+
+/* ----- ZONA MAIN -----*/
+
+main {
+    border-style: solid;
+    border-color: black;
+    border-width: 15px;
+    margin-bottom: 20px;
+    height: 300px;   
+    background-color: black;
+    padding-bottom: 50px;
+}
+
+article {
+    border-style: solid;
+    border-color: #40465a;
+    background-color: #40465a;
+    border-width: 15px;  
+    width: 63%;   
+    height: 270px;   
+    padding-bottom: 35px;
+}
+
+aside {
+    width: 31%;
+    background-color: #fd5353;
+    height: 120px;
+}
+
+aside > section {
+    height: 145px;  
+    width: 100%;
+    align-self: left;
+    margin-top: 10px; 
+}
+
+aside > section > p {
+    background-color: #eed461;
+    margin: 0px 10px 6px 10px;
+}
+
+.flex-vertical-dalt {
+    display: flex;
+    flex-direction: column;
+}
+
+main > article > section {
+    width: 100%;
+    background-color: #40465a;
+}
+
+.art-corto {
+    width: 48%;
+    background-color:#1465b1;
+    margin-bottom: 10px;
+}
+
+.art-largo {
+    width: 100%;
+    background-color:#79b0e4;
+    margin-bottom: 5px;
+}
+
+.flex-2-cols {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.flex-1-col {
+    display: flex;
+    align-self: auto;
+}
+
+.aside-item {
+    margin-top: 5px;
+}
+
+/* ----- ZONA FOOTER -----*/
+
+footer {
+    border-style: solid;
+    border-color: black;
+    border-width: 15px;
+    margin-bottom: 5px;
+}
+
+footer > p {
+    background-color: #eed461;
+    border-width: 0px;
+    margin: 0px;
+    text-align: center;
+}
+
