@@ -7,7 +7,7 @@
         <meta name = "author"      content = "Ignasi - IT Academy BcnActiva">
         <meta name = "keywords"    content = "php personal home page web tools development">     
         <title>Sprint-1_M4-PhP-POO</title>
-        <link rel="stylesheet" href="styles/styles.css">          
+        <link rel="stylesheet" href="Styles/styles.css">          
     </head>
     <body>
         <div id="content" class="flex-vertical">
@@ -27,10 +27,10 @@
                 <article class="flex-vertical">
                     <section class="art-corto, flex-2-cols">
                         <post class="art-corto"> 
-                            <?php include 'controllers/exercici_1.php';?>
+                            <?php include 'Controllers/exercici_1.php';?>
                         </post>
                         <post class="art-corto"> 
-                            <?php include 'controllers/exercici_2.php';?>
+                            <?php include 'Controllers/exercici_2.php';?>
                         </post>                        
                     </section>
                     <section class="flex-2-cols">
