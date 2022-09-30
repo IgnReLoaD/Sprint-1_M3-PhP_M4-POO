@@ -13,6 +13,8 @@
 
     // funcions 
     function esPrimer($n){
+        // numeros Enters divisibles per $j (de 2 fins al $n demanat), mentre que $c es el comptador de vegades divisible. 
+        // Serà Primer si només és divisible 1 vegada, per tan Return del IF atura execució i NO fa seguent volta de bucle!!
         $c=0;
         for ($j=2;$j<=$n;$j++){
             if ($n%$j==0){
@@ -24,8 +26,8 @@
     }
 
     function eratostenes($num){
-        $strLlistat = "nums Primers menors a num Natural (positiu) " . $num . ":<br><br>";
-
+        $strLlistat = "nums Primers menors a num Natural (positiu) <b>" . $num . "</b>:<br><br>";
+        // mostra en vermell els Primers, i en negre tatxat els no-Primers
         for ($i=0;$i<$num;$i++){        
             if ($i<=1){
                 $strLlistat .= '<del>'.$i.'</del> ';
