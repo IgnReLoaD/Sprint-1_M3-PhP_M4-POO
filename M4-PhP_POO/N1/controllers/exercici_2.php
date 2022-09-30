@@ -24,11 +24,11 @@
         $strFig2 = "Triangle";
 
         // llogica de dades
-        $strMsg1 = "L'àrea del teu Rectangle (b*h)  = " . strval(drawShape($strFig1,$intBase,$intHigh)) . "m<sup>2</sup>.<br>";
-        $strMsg2 = "L'àrea del teu Triangle (b*h/2) = " . strval(drawShape($strFig2,$intBase,$intHigh)) . "m<sup>2</sup>.<br>";        
+        $strMsg1 = "L'àrea del teu Rectangle (b*h)  = " . strval(drawShape($strFig1,$intBase,$intHigh)) . "m<sup>2</sup>. <br>";
+        $strMsg2 = "L'àrea del teu Triangle (b*h/2) = " . strval(drawShape($strFig2,$intBase,$intHigh)) . "m<sup>2</sup>. <br>";        
 
         // sortida de dades
-        echo $strMsg1 . $strMsg2 . '-----------------------------------------<br>';
+        echo $strMsg1 . $strMsg2 . '---------------------------------------------------<br>';
     }
 
 ?>
@@ -43,7 +43,7 @@
         <input type="number" id="inpHigh" name="inpHigh" min="1" max="9">
         <br>
         <br>
-        <input type="submit" value=" Dibuixar ">
+        <input type="submit" value=" Calcular Àrees ">
         <br> 
         <br>     
     </form>
