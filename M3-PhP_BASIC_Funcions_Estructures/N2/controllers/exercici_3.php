@@ -1,43 +1,78 @@
 <!-- 
     ENUNCIAT:
-    Escriu una funció que determini la quantitat total a pagar per una trucada telefònica 
-    segons les següents premisses:
-    - Tota trucada que duri menys de 3 minuts té un cost de 10 cèntims.
-    - Cada minut addicional a partir dels 3 primers és un pas de comptador i costa 5 cèntims.
+    Imagina que som a una botiga on es ven:
+
+    - Xocolata: 1 euro
+    - Xiclets: 0,50 euros
+    - Caramels: 1,50 euros
+
+    Implementa un programa que permeti afegir càlculs a un total de compres d'aquest tipus. 
+    Per exemple, que si comprem:
+
+    - 2 xocolates, 1 de xiclets i 1 de caramels, 
+    tinguem un programa que permeti anar afegint els subtotals a un total, tal que així:
+
+    funció(2 xocolates) + funció(1 de xiclets) + funció(1 de carmels) = 2 + 0.5 + 1.5
+
+    Sent, per tant, el total, 4.
   -->
 
     <!-- instruccions PhP  -->
 <?php
-    echo '<b> EXERCICI-2 </b> <br><br>';
+    echo '<b> EXERCICI-3 </b> <br><br>';
 
     // funcions amb valors Float (decimals)
-    function trucada($intTemps, $floTarifaBase, $floTarifaPaso) {        
-        return  ($floTarifaBase + $floTarifaPaso + ((($intTemps-3) * $floTarifaPaso)));
+    function xocolat($quantitat){
+        return $quantitat * floTARIFA_XOCOS;
     }
 
-    if ( !empty($_POST['inpTemps']) ) {
+    function xiclets($quantitat){
+        return $quantitat * floTARIFA_XICLE;
+    }
+
+    function caramel($quantitat){
+        return $quantitat * floTARIFA_CARAM;
+    }
+
+    function passarPerCaixa($intXocolat,$intXiclets,$intCaramel) {            
+        $floSubTotalXocolat = xocolat($intXocolat);
+        $floSubTotalXiclets = xiclets($intXiclets);
+        $floSubTotalCaramel = caramel($intCaramel);
+        return  (($floSubTotalXocolat + $floSubTotalXiclets + $floSubTotalCaramel) * (1 + floTARIFA_IVA));
+    }
+
+    if ( !empty($_POST['inpXocolat']) || !empty($_POST['inpXiclets']) || !empty($_POST['inpCaramel']) ) {
 
         // entrada de dades
-        $intTemps = intval($_POST['inpTemps']);    
-        $floTotalCoste = 0;
-        define("floTARIFA_BASE",0.10);
-        define("floTARIFA_PASO",0.05);
+        $intXocolat = intval($_POST['inpXocolat']);    
+        $intXiclets = intval($_POST['inpXiclets']);   
+        $intCaramel = intval($_POST['inpCaramel']);   
+        $floTotCost = 0;
+        define("floTARIFA_XOCOS",1.00);
+        define("floTARIFA_XICLE",0.50);
+        define("floTARIFA_CARAM",1.50);
+        define("floTARIFA_IVA",0.10);
 
         // llogica de dades
-        // ($intTemps<3) ? ($floTotalCoste=0.10) : ($floTotalCoste = 0.10 + 0.05 + ((($intTemps-3) * 0.05)));
-        ($intTemps<3) ? ($floTotalCoste=floTARIFA_BASE) : ($floTotalCoste = trucada($intTemps,floTARIFA_BASE,floTARIFA_PASO));        
+        $floTotCost = passarPerCaixa($intXocolat,$intXiclets,$intCaramel);               
         unset($_POST);
         
         // sortida de dades        
-        echo 'La trucada costa: ' . number_format($floTotalCoste,2) . '€ !! <br><br>';
+        echo 'El ticket costa: ' . number_format(($floTotCost/1.1),2) . '€ +Iva= <span>' . number_format($floTotCost,2) . '</span> euruuss Joaan!!<br><br>';
     }
 
 ?>
 
     <!-- renderitzat Html  -->
 <form action="index.php" method="post">
-    <label for="inpTemps">COST TRUCADA:<br><br>Quant costa la teva trucada?<br> &nbsp; ... entra els minuts (1-15):</label>
-    <input type="number" id="inpTemps" name="inpTemps" value="0" min="1" max="15">
+    <label for="inpXocolat">Xocolata: </label>
+    <input type="number" id="inpXocolat" name="inpXocolat" value="0" min="0" max="10">
+    <br>
+    <label for="inpXiclets">Xiclets: </label>
+    <input type="number" id="inpXiclets" name="inpXiclets" value="0" min="0" max="10">
+    <br>
+    <label for="inpCaramel">Caramels: </label>
+    <input type="number" id="inpCaramel" name="inpCaramel" value="0" min="0" max="10">
     <br>
     <br>
     <input type="submit" value=" mostrar cost ">
