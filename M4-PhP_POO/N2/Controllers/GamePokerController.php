@@ -7,7 +7,8 @@
     //  p.ex.: $_resultThrow = array("K","9","J","Q","J");
 
     function turn($intGamesToPlay,$intDicesPerTurn){
-        echo 'entrem a GamePokerController <br>';
+        
+        echo 'entrem a GamePokerController::turn() <br>';
         $arrScore = array();
 
         for ($i=1; $i<=$intGamesToPlay; $i++){

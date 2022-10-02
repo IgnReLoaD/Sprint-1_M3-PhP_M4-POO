@@ -16,6 +16,9 @@
         }  
 
         public function play($intMaxDices){
+
+            echo 'Entrem a GamePokerModel->play(' . $intMaxDices . ') <br>';
+
             // bucle per tirar els 5 daus (o els que siguin)
             for ($dice=1; $dice==$intMaxDices; $dice++) {
                 $this->_intThrows += 1;

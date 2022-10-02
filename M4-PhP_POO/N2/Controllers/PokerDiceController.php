@@ -4,7 +4,7 @@
     require './Models/PokerDiceModel.php';
     
     function shot(){
-        echo 'entrem a PokerDiceController <br>';
+        echo 'entrem a PokerDiceController::shot <br>';
         $objDICE = new PokerDice;
         return $objDICE->throw();
         // return $objDICE->shapeName();

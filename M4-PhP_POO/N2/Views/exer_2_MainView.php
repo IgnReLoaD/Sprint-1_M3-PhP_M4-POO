@@ -22,13 +22,18 @@
         // entrada de dades
         $intTurns = $_POST['inpTurns'];
         $intDices = $_POST['inpDices'];
+        echo 'Torns/jugades: ' . $intTurns . '<br>';
+        echo 'Daus per torn: ' . $intDices . '<br>';
 
         // llogica de dades
-        $strScore = turn($intTurns,$intDices);
+        $arrScore = turn($intTurns,$intDices);
         unset($_POST);
 
         // sortida de dades
-        echo '&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span> ' . $strScore . ' </span>';
+        echo '<pre>';
+        echo '&nbsp; &nbsp; &nbsp; &nbsp; <span>' . var_dump($arrScore) . '</span>';
+        echo '</pre>';
+        // echo '&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span> ' . $strScore . ' </span>';
     }
 
 ?>
