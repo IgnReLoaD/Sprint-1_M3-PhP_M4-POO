@@ -10,25 +10,23 @@
 
 <?php
     // l'arxiu controller té els mètodes-funcions específiques per PokerDice
-    require './Controllers/GamePokerController.php';
     require './Controllers/PokerDiceController.php';
 
     echo ' &nbsp; <b> POO Nivell-2 EXER-1 PockerDice (Herència subclasses)</b> <br><br>';    
 
     // $shot = 1;
 
-    if ( !empty($_POST['inpTurns']) && !empty($_POST['inpDices']) ) {
+    if ( !empty($_POST['inpShot']) && ($_POST['inpShot'] < "5") ) {
 
         // entrada de dades
-        $intTurns = $_POST['inpTurns'];
-        $intDices = $_POST['inpDices'];
+        $intShot = $_POST['inpShot'];
 
         // llogica de dades
-        $strScore = turn($intTurns,$intDices);
+        $strShot = shot();
         unset($_POST);
 
         // sortida de dades
-        echo '&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span> ' . $strScore . ' </span>';
+        echo '&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span> ' . $strShot . ' </span>';
     }
 
 ?>
@@ -36,13 +34,10 @@
     <!-- renderitzat Html  -->    
     <form action="index.php" method="post">
         <br>
-        &nbsp; &nbsp; <label for="inpTurns">Número de torns/jugades (1-9): </label>
+        &nbsp; &nbsp; <label for="inpShot">Torn de jugada... &nbsp; </label>
         <!-- <input type="number" id="inpShot" name="inpShot" value="<?php $shot ?>" readonly> -->
-        <input type="number" id="inpTurns" name="inpTurns" value="5" min="1" max="9">
+        <input type="number" id="inpShot" name="inpShot" value="1" readonly>
         <br>        
-        &nbsp; &nbsp; <label for="inpDices">Número de daus per torn (1-5): </label>        
-        <input type="number" id="inpDices" name="inpDices" value="5" min="1" max="5">
-        <br>
         <br>
         &nbsp; &nbsp; &nbsp; <input type="submit" value=" Tirar! ">
         <br> 

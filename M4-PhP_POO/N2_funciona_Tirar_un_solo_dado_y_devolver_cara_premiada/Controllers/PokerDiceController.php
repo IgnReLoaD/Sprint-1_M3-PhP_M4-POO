@@ -6,8 +6,8 @@
     function shot(){
         echo 'entrem a PokerDiceController <br>';
         $objDICE = new PokerDice;
-        return $objDICE->throw();
-        // return $objDICE->shapeName();
+        $objDICE->throw();
+        return $objDICE->shapeName();
     }
 
 ?>
