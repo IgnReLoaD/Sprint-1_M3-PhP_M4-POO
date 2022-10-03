@@ -114,7 +114,7 @@ main {
     border-color: black;
     border-width: 15px;
     margin-bottom: 20px;
-    height: 450px;   
+    height: fit-content;   
     background-color: black;
     padding-bottom: 50px;
 }
@@ -125,7 +125,7 @@ article {
     background-color: #40465a;
     border-width: 15px;  
     width: 63%;   
-    height: 420px;   
+    height: fit-content;   
     padding-bottom: 35px;
 }
 

@@ -8,7 +8,7 @@
 
     function turn($intGamesToPlay,$intDicesPerTurn){
         
-        echo 'entrem a GamePokerController::turn() <br>';
+        echo '<br> A - ENTREM UNA SOLA VEGADA AL GamePokerController::turn($intGamesToPlay=' . $intGamesToPlay . ') <br><br>';
         $arrScore = array();
 
         for ($i=1; $i<=$intGamesToPlay; $i++){

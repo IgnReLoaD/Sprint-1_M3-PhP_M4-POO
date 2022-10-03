@@ -4,7 +4,7 @@
     require './Models/PokerDiceModel.php';
     
     function shot(){
-        echo 'entrem a PokerDiceController::shot <br>';
+        echo '<br> &nbsp; ... C - ... entrem $intMaxDices vegades a PokerDiceController::shot <br>';
         $objDICE = new PokerDice;
         return $objDICE->throw();
         // return $objDICE->shapeName();

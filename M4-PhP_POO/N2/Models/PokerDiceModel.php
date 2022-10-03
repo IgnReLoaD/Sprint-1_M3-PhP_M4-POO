@@ -16,7 +16,7 @@
         } 
 
         public function throw() {
-            echo 'entrem a PokerDiceModel -> throw() <br>';
+            echo '<br> &nbsp; ... D - ... entrem a PokerDiceModel -> throw() i guarda result en una pos de array<br>';
             $this->setAwardFace(array_rand($this->_facesDice, 1));
             return $this->shapeName();
         }
